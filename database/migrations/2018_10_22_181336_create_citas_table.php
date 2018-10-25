@@ -14,7 +14,7 @@ class CreateCitasTable extends Migration
     public function up()
     {
         Schema::create('cita', function (Blueprint $table) {
-            $table->increments('id_cita');
+            $table->increments('id_cit');
             $table->string('observaciones',100);
             //$table->unsignedInteger('id_horarios_disponibles');
             //$table->foreign('id_horarios_disponibles')->references('id_horarios_disponibles')->on('horarios_diponible');

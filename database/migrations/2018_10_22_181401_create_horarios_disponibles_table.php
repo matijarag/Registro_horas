@@ -14,7 +14,14 @@ class CreateHorariosDisponiblesTable extends Migration
     public function up()
     {
         Schema::create('horarios_disponible', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_hor_dis');
+            $table->date('fecha_hor_dis');
+            $table->string('rut_usuario',12)->default('');
+            $table->boolean('disponibilidad')->default(true);
+            $table->unsignedInteger('id_estres');
+            $table->foreign('id_estres')->references('id_est_res')->on('estado_reserva');
+            $table->unsignedInteger('id_mod');
+            $table->foreign('id_mod')->references('id_mod')->on('modulo');
             $table->timestamps();
         });
     }
