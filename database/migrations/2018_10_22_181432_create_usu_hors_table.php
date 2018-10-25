@@ -16,7 +16,7 @@ class CreateUsuHorsTable extends Migration
         Schema::create('usu_hor', function (Blueprint $table) {
             $table->date('fecha_usu_hor');
             $table->unsignedInteger('id_usu');
-            $table->foreign('id_usu')->references('id_usu')->on('usuario');
+            $table->foreign('id_usu')->references('id_usu')->on('users');
             $table->unsignedInteger('id_hordis');
             $table->foreign('id_hordis')->references('id_hor_dis')->on('horarios_disponible');
             $table->timestamps();
