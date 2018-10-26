@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class UsuarioNormalController extends Controller
 {
@@ -13,7 +14,7 @@ class UsuarioNormalController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -34,7 +35,16 @@ class UsuarioNormalController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $pass = str_limit($request['nombre'],3,'').str_limit($request['rut'],4,'');
+        $nombre = $request['nombre'];
+        User::create([
+            'name'=>$request['nombre'],
+            'email'=>$request['email'],
+            'rut'=>$request['rut'],
+            'password'=>bcrypt($pass),
+            'id_tipo_usuario'=> 1,
+        ]);
+        return view('confirmacion',compact('pass','nombre'));
     }
 
     /**

@@ -17,3 +17,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/admin', 'UserController');
+Route::resource('/usu_norm', 'UsuarioNormalController');

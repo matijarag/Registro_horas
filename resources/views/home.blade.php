@@ -28,7 +28,36 @@
                           
                           <!-- Tab panes -->
                           <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active <!-- fade-->" id="usu_nrom">crear usuario normal</div>
+                            <div role="tabpanel" class="tab-pane active <!-- fade-->" id="usu_nrom">
+                                <div class="container col-md-12">
+                                    <Form class="form-horizontal" method="POST" action="{{ route('usu_norm.store') }}">
+                                        @csrf
+                                            <div class="form-group row">
+                                                <label class="col-md-2 text-md-right col-form-label" for="rut">Rut</label>
+                                                <div class="col-md-8">
+                                                    <input class="form-control" type="text" name="rut" placeholder="ingrese rut" required>
+                                                </div>
+    
+                                            </div>
+                                            <div class="form-group row">
+                                                <label class="col-md-2 text-md-right col-form-label" for="nombre">Nombre</label>
+                                                <div class="col-md-8">
+                                                    <input class="form-control" type="text" name="nombre" placeholder="ingrese nombre" required>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <label class="col-md-2 text-md-right col-form-label" for="email">Email</label>
+                                                <div class="col-md-8">
+                                                    <input class="form-control" type="email" name="email" placeholder="ingrese email" required>
+                                                </div>
+    
+                                            </div>
+                                        <button type="submit" class="btn btn-primary">Crear</button>
+                                    </Form>
+                                </div>
+                            </div>
                             <div role="tabpanel" class="tab-pane <!-- fade-->" id="cre_mod_y_hor">crear modulos y horarios</div>
                             <div role="tabpanel" class="tab-pane <!-- fade-->" id="tom_hor">tomar hora</div>
                           </div>

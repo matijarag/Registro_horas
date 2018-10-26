@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\tipo_usuario;
 use Redirect;
+use Illuminate\Support\Str;
 
 class UserController extends Controller
 {
@@ -54,8 +55,8 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        //
+    {   
+        
     }
 
     /**
