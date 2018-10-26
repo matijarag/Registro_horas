@@ -17,4 +17,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/admin', 'UserController');
+<<<<<<< HEAD
 Route::resource('/usu_norm', 'UsuarioNormalController');
+=======
+Route::resource('/HorasDisponibles', 'HorariosDisponiblesController');
+>>>>>>> refs/remotes/origin/master
