@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('admin.store') }}">
                         @csrf
 
                         <div class="form-group row">
@@ -37,6 +37,22 @@
                                     </span>
                                 @endif
                             </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="tipo" class="col-md-4 col-form-label text-md-right">{{ __('Tipo_usuario') }}</label>
+                            <div class="col-md-6">
+                                <select class="form-control" id="tipo" name="tipo">
+                                        <option selected disabled>Selecciona un tipo de usuario</option>
+                                    @foreach ($tipo_usuario as $tipo_usuarios)
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            
                         </div>
 
                         <div class="form-group row">
