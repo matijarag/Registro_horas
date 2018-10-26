@@ -44,11 +44,8 @@
                             <div class="col-md-6">
                                 <select class="form-control" id="tipo" name="tipo">
                                         <option selected disabled>Selecciona un tipo de usuario</option>
-                                    @foreach ($tipo_usuario as $tipo_usuarios)
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
+                                    @foreach ($tipo_usuario as $tipo)
+                                        <option value="{{ $tipo->id_tip_usu}}">{{ $tipo->descripcion_tip_usu}}</option>
                                     @endforeach
                                 </select>
                             </div>
